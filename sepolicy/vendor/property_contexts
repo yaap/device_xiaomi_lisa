@@ -18,6 +18,11 @@ ro.boot.fpsensor                   u:object_r:vendor_fp_prop:s0
 ro.hardware.fp                     u:object_r:vendor_fp_prop:s0
 vendor.fps_hal.                    u:object_r:vendor_fp_prop:s0
 
+# IMEI
+ro.vendor.oem.imei                              u:object_r:vendor_deviceid_prop:s0
+ro.vendor.oem.imei1                             u:object_r:vendor_deviceid_prop:s0
+ro.vendor.oem.imei2                             u:object_r:vendor_deviceid_prop:s0
+
 # SPU
 persist.vendor.security.spuari.              u:object_r:vendor_security_spuari_prop:s0
 
