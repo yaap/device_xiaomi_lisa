@@ -495,6 +495,8 @@
         <item>258</item> <!-- vivid -->
         <item>256</item> <!-- saturated -->
         <item>257</item> <!-- original -->
+        <item>268</item> <!-- p3 -->
+        <item>267</item> <!-- srgb -->
      </integer-array>
 
      <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
