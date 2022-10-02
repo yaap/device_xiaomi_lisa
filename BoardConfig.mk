@@ -13,6 +13,7 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Inherit from proprietary files
 include vendor/xiaomi/lisa/BoardConfigVendor.mk
+include vendor/xiaomi/lisa-firmware/BoardConfigVendor.mk
 
 # A/B
 AB_OTA_UPDATER := true
