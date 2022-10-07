@@ -1,22 +1,16 @@
 [
   {
-    "repository": "android_vendor_xiaomi_lisa",
+    "repository": "vendor_xiaomi_lisa",
     "target_path": "vendor/xiaomi/lisa"
   },
   {
-    "repository"   : "android_kernel_xiaomi_lisa",
+    "repository"   : "kernel_xiaomi_lisa",
     "target_path"  : "kernel/xiaomi/lisa"
   },
   {
     "remote": "gitlab",
-    "repository": "ALKALiKong/prebuilts_clang_host_linux-x86_clang-r450784b",
-    "target_path": "prebuilts/clang/host/linux-x86/clang-r450784b",
-    "branch": "master"
-  },
-  {
-    "remote": "gitlab",
-    "repository": "Kscope-Devices/android_vendor_xiaomi_lisa-firmware",
+    "repository": "yaosp/vendor_xiaomi_lisa-firmware",
     "target_path": "vendor/xiaomi/lisa-firmware",
-    "branch": "sunflowerleaf"
+    "branch": "thirteen"
   }
 ]
