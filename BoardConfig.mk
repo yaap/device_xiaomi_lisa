@@ -188,6 +188,12 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
+# Soong
+SOONG_CONFIG_NAMESPACES += androidBluetoothVars
+SOONG_CONFIG_androidBluetoothVars += \
+    le_disable_read_buffer_size_and_set_host
+SOONG_CONFIG_androidBluetoothVars_le_disable_read_buffer_size_and_set_host ?= true
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
