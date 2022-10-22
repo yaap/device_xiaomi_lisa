@@ -12,5 +12,11 @@
     "repository": "yaosp/vendor_xiaomi_lisa-firmware",
     "target_path": "vendor/xiaomi/lisa-firmware",
     "branch": "thirteen"
+  },
+  {
+    "remote": "gitlab",
+    "repository": "yaosp/vendor_xiaomi_lisa-miuicamera",
+    "target_path": "vendor/xiaomi/lisa-miuicamera",
+    "branch": "thirteen"
   }
 ]
