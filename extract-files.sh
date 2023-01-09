@@ -55,6 +55,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/bin/hw/dolbycodec2)
+            patchelf --replace-needed libavservices_minijail_vendor.so libavservices_minijail.so "${2}"
+            ;;
         vendor/etc/camera/pure*_parameter.xml)
             sed -i 's/=\([0-9]\+\)>/="\1">/g' "${2}"
             ;;
