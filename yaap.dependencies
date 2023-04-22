@@ -8,6 +8,10 @@
     "target_path"  : "kernel/xiaomi/lisa"
   },
   {
+    "repository"   : "hardware_xiaomi",
+    "target_path"  : "hardware/xiaomi"
+  },
+  {
     "remote": "gitlab",
     "repository": "yaosp/vendor_xiaomi_lisa-miuicamera",
     "target_path": "vendor/xiaomi/lisa-miuicamera",
