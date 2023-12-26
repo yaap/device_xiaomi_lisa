@@ -20,10 +20,13 @@ package org.lineageos.settings;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.hardware.display.DisplayManager;
 import android.os.IBinder;
 import android.os.SystemProperties;
 import android.util.Log;
+import android.view.Display;
 import android.view.Display.HdrCapabilities;
 import android.view.SurfaceControl;
 import androidx.preference.PreferenceManager;
@@ -48,10 +51,11 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
         FileUtils.writeLine(DC_DIMMING_NODE, dcDimmingEnabled ? "08 01" : "08 00");
 
-        // Override HDR types
-        final IBinder displayToken = SurfaceControl.getInternalDisplayToken();
-        SurfaceControl.overrideHdrTypes(displayToken, new int[]{
+        // Override HDR types to enable Dolby Vision
+        final DisplayManager displayManager = context.getSystemService(DisplayManager.class);
+        displayManager.overrideHdrTypes(Display.DEFAULT_DISPLAY, new int[]{
                 HdrCapabilities.HDR_TYPE_DOLBY_VISION, HdrCapabilities.HDR_TYPE_HDR10,
                 HdrCapabilities.HDR_TYPE_HLG, HdrCapabilities.HDR_TYPE_HDR10_PLUS});
     }
+
 }
