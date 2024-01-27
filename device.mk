@@ -384,6 +384,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor
 
+# QTI
+TARGET_BOARD_PLATFORM := lahaina
+
 # Recovery
 PRODUCT_PACKAGES += \
     init.recovery.qcom.rc
